@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="source" translatesAutoresizingMaskIntoConstraints="NO" id="6iV-zp-4rH">
+                                <rect key="frame" x="0.0" y="94" width="414" height="708"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaT-0u-xDQ">
+                                <rect key="frame" x="96" y="818" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Z9Q-Pe-j1t"/>
+                                    <constraint firstAttribute="width" constant="46" id="sQt-Rp-6Qy"/>
+                                </constraints>
+                                <state key="normal" title="加水印"/>
+                                <connections>
+                                    <action selector="addWaterMark:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aUc-tN-KQo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1x-iz-bNM">
+                                <rect key="frame" x="265" y="818" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3yK-zQ-yYd"/>
+                                    <constraint firstAttribute="width" constant="46" id="oHz-Nf-bqT"/>
+                                </constraints>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SKK-Ex-mJQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6iV-zp-4rH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="0Qj-IC-zSN"/>
+                            <constraint firstItem="6iV-zp-4rH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Ye-rs-OdP"/>
+                            <constraint firstItem="6iV-zp-4rH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Eqy-Bt-UQI"/>
+                            <constraint firstItem="kaT-0u-xDQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="Frk-ke-KPa"/>
+                            <constraint firstItem="6iV-zp-4rH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XQ8-VH-ehz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B1x-iz-bNM" secondAttribute="trailing" constant="103" id="gGY-Xf-9pW"/>
+                            <constraint firstItem="kaT-0u-xDQ" firstAttribute="top" secondItem="6iV-zp-4rH" secondAttribute="bottom" constant="16" id="n4j-6V-z9b"/>
+                            <constraint firstItem="B1x-iz-bNM" firstAttribute="top" secondItem="6iV-zp-4rH" secondAttribute="bottom" constant="16" id="uYn-qZ-xcm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="6iV-zp-4rH" id="sCF-Xy-PDz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="source" width="750" height="1334"/>
+    </resources>
+</document>
